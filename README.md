@@ -13,4 +13,8 @@ Structure framework
   - Manage external file for the whole framework (testNG, .xml, log4j, Excel)
 + interfaces
   - Manage UI/Locator in project 
-+ Folder difference
++ Folder difference (Third Party Tool)
+  - Libraries
+  - uploadfiles
+  - browserLogf
+  - browserDriver
