@@ -2,18 +2,31 @@ package com.nopcommerce.Register;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 
 public class Register {
-  @Test
-  public void f() {
-  }
-  @BeforeClass
-  public void beforeClass() {
-  }
+	WebDriver driver;
+	String projectPath = System.getProperty("user.dir");
+	@BeforeClass
+	public void beforeClass() {
+		System.setProperty("webdriver.gecko.driver",projectPath+"\\browserDrivers\\geckodriver.exe");		
+		driver = new FirefoxDriver();
+		driver.get("https://demo.nopcommerce.com/");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
 
-  @AfterClass
-  public void afterClass() {
-  }
+	@Test
+	public void f() {
+	}
+
+	@AfterClass
+	public void afterClass() {
+		driver.quit();
+	}
 
 }

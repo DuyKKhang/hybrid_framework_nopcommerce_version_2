@@ -3,6 +3,7 @@
 	<name>hybrid_framework_nopcommerce_version_2</name>
 	<comment></comment>
 	<projects>
+		<project>hybrid-framework-nopcommerce</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
